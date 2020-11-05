@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { BrowserRouter, Route } from "react-router-dom";
+import MainPage from "./pages/MainPage";
+import RepoListPage from "./pages/RepoListPage";
+import RepoReadMePage from "./pages/RepoReadMePage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="app-wrapper">
+        <Route exact path="/" render={() => <MainPage />} />
+        <Route exact path="/:userName" render={() => <RepoListPage />} />
+        <Route
+          exact
+          path="/:userName/:repositoryName"
+          render={() => <RepoReadMePage />}
+        />
+      </div>
+    </BrowserRouter>
   );
 }
 
