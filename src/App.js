@@ -9,12 +9,12 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
-        <Route exact path="/" render={() => <MainPage />} />
-        <Route exact path="/:userName" render={() => <RepoListPage />} />
+        <Route exact path="/" component={MainPage} />
+        <Route exact path="/:userName" component={RepoListPage} />
         <Route
           exact
           path="/:userName/:repositoryName"
-          render={() => <RepoReadMePage />}
+          component={RepoReadMePage}
         />
       </div>
     </BrowserRouter>
