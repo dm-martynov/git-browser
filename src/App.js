@@ -8,7 +8,7 @@ import RepoReadMePage from "./pages/RepoReadMePage";
 function App() {
   return (
     <BrowserRouter>
-      <div className="app-wrapper">
+      <div id="app-wrapper">
         <Route exact path="/" component={MainPage} />
         <Route exact path="/:userName" component={RepoListPage} />
         <Route

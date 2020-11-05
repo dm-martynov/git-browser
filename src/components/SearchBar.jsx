@@ -19,14 +19,14 @@ export default function SearchBar() {
     <div>
       <span>Search</span>
       <input
-        className="input-field"
+        id="input-field"
         onChange={handleChange}
         type="text"
         placeholder=""
         name="Search"
         value={value}
       />
-      <button onClick={handleSubmit} className="search-button">
+      <button onClick={handleSubmit} id="search-button">
         Submit
       </button>
     </div>

@@ -11,7 +11,7 @@ export default function ReadMeText(props) {
   }, [props.userName, props.repositoryName]);
 
   return (
-    <div className="description">
+    <div id="description">
       <ReactMarkdown source={readMe} />
     </div>
   );

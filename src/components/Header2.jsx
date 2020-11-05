@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 export default function Header(props) {
   return (
     <div>
-      <div className="repository-name">User name: {props.userName}</div>
+      <div id="repository-name">User name: {props.userName}</div>
       <div>
-        <Link to="/" className="go-back">
+        <Link to="/" id="go-back">
           Go Home
         </Link>
       </div>
       <div>
-        <Link to={"/" + props.userName} className="go-repository-list">
+        <Link to={"/" + props.userName} id="go-repository-list">
           Go to Repos List
         </Link>
       </div>
